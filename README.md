@@ -8,6 +8,9 @@ The report can help you identify which Entra groups are being used in your assig
 
 [screenshot]: https://github.com/SMSAgentSoftware/IntuneAssignmentsReport/blob/main/Report%20screenshot.png "Report screenshot"
 
+## Configure the solution
+Instructions for configuring the solution can be found here: https://docs.smsagent.blog/microsoft-endpoint-manager-reporting/intune-assignments-report
+
 ## Supported assignable items
 Currently the solution supports at least the following assignable items. Most have been tested but not all. If you find any issues or want to add any missing assignable items, please raise an issue on this repository.
 - Apps
