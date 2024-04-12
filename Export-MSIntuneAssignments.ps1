@@ -58,6 +58,12 @@ $ResourceTable = [ordered]@{
         SelectProperties = "id,displayName"
         RequiresExpand = $true
     }
+    DeviceEnrollmentNotificationsConfigurations = @{
+        Url = "deviceManagement/deviceEnrollmentConfigurations"
+        FilterUrl = "deviceManagement/deviceEnrollmentConfigurations?`$filter=deviceEnrollmentConfigurationType%20eq%20%27EnrollmentNotificationsConfiguration%27"
+        SelectProperties = "id,displayName"
+        RequiresExpand = $false
+    }
     IntuneBrandingProfiles = @{
         Url = "deviceManagement/intuneBrandingProfiles"
         SelectProperties = "id,profileName"
@@ -336,6 +342,10 @@ foreach ($MasterResource in $ResourceTable.Keys)
     if ($MasterResource -eq "OrganizationalMessages")
     {
         $URL = "https://graph.microsoft.com/beta/$($ResourceTable[`"$MasterResource`"].Url)"
+    }
+    elseif ($MasterResource -eq "DeviceEnrollmentNotificationsConfigurations")
+    {
+        $URL = "https://graph.microsoft.com/beta/$($ResourceTable[`"$MasterResource`"].FilterUrl)&`$Select=$($ResourceTable[`"$MasterResource`"].SelectProperties)"
     }
     else 
     {
