@@ -17,6 +17,7 @@
     CloudPC.Read.All
     DeviceManagementRBAC.Read.All
     GroupMember.Read.All
+    DeviceManagementScripts.Read.All
 #>
 
 
@@ -1399,3 +1400,4 @@ catch
 } 
 Remove-Item -Path "$Destination\Assignments.csv" -Force
 #endregion --------------------------------------------------------------------------------------------------------
+
